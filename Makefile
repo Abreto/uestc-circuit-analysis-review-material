@@ -10,6 +10,7 @@ all:$(JOBNAME).pdf
 
 $(JOBNAME).pdf: $(TEXSRCS)
 	cd $(SRCDIR); xelatex -jobname=$(JOBNAME) $(MAINTEX)
+	cd $(SRCDIR); xelatex -jobname=$(JOBNAME) $(MAINTEX)
 	mv $(SRCDIR)$(JOBNAME).pdf .
 
 clean:
