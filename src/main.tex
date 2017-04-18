@@ -1,13 +1,27 @@
 % Main Structure
 \documentclass[UTF8]{ctexbook}
 \usepackage{graphicx}
+\usepackage{makeidx}
+\makeindex
+
+\newcommand\diffd{\mathrm{d}}
+\newcommand\diff[2]{
+    \frac{\diffd {#1}}{\diffd {#2}}
+}
+\newcommand\ddiff[2]{
+    \frac{\diffd^2 {#1}}{\diffd {#2}^2}
+}
+
 \begin{document}
 \graphicspath{{figures/}}
 \title{《电路分析基础》复习材料}
 \author{子枵\thanks{E-mail: m@abreto.net}}
+\frontmatter
 \maketitle
 
 \tableofcontents
+
+\mainmatter
 
 \input{part1}
 
